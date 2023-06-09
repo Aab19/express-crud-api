@@ -48,7 +48,7 @@ export const createUser = async (req, res) => {
     delete newUser.sent;
     delete newUser.failedToSend;
 
-    scheduleBirthdayMessages();
+    // scheduleBirthdayMessages();
     return res.send({
       data: newUser,
       message: "Success Create User",
@@ -86,7 +86,7 @@ export const updateUser = async (req, res) => {
     delete updatedUser.sent;
     delete updatedUser.failedToSend;
 
-    scheduleBirthdayMessages();
+    // scheduleBirthdayMessages();
     return res.send({
       data: updatedUser,
       message: "Success Edit User",
@@ -104,7 +104,7 @@ export const deleteUser = async (req, res) => {
         id: parseInt(id),
       },
     });
-    scheduleBirthdayMessages();
+    // scheduleBirthdayMessages();
     return res.send({
       data: deletedUser,
       message: "Success Delete User",
